@@ -59,21 +59,15 @@ public class User_Account extends AppCompatActivity {
         setContentView(R.layout.user_account);
 //        testTime();
 
-//        Intent myIntent = getIntent();
-//        email = myIntent.getStringExtra("email");
-//
-//        if(myIntent.getSerializableExtra("Players") != null){
-//           optimalPlayers = (ArrayList) myIntent.getSerializableExtra("Players");
-//        }
-//
-//        if(optimalPlayers.size() > 6){
-//            setPlayers(optimalPlayers);
-//        }
-//        else{
-//            setInfo(email);
-//        }
-//
-//        setSalary();
+        Intent myIntent = getIntent();
+        email = myIntent.getStringExtra("email");
+
+
+        if(myIntent.getSerializableExtra("Players") != null){
+           setPlayers((ArrayList) myIntent.getSerializableExtra("Players"));
+        }
+
+        setSalary();
     }
 
     //Set the user info. i.e. username, email, ppg, and ppg graph

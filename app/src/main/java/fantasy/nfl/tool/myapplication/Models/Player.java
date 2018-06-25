@@ -7,10 +7,25 @@ import java.io.Serializable;
  */
 
 public class Player implements Serializable {
-    private String name, position, team, game;
-    private double price, ppg, projectedPoints;
-    private int id;
+    public double getPercent() {
+        return percent;
+    }
 
+    public void setPercent(double percent) {
+        this.percent = percent;
+    }
+
+    private String name, position, team, game;
+    private double ppg, projectedPoints, percent;
+    private int id, shares, price;
+
+    public int getShares() {
+        return shares;
+    }
+
+    public void setShares(int shares) {
+        this.shares = shares;
+    }
 
     public Player(String name, double projectedPoints, int price){
         this.name = name;
@@ -18,7 +33,7 @@ public class Player implements Serializable {
         this.price = price;
     }
 
-    public Player(String name, double price, double ppg, String game, String team, String position){
+    public Player(String name, int price, double ppg, String game, String team, String position){
         this.name = name;
         this.price = price;
         this.team = team;
@@ -39,7 +54,7 @@ public class Player implements Serializable {
 
     public double getPpg() {return ppg;}
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
@@ -62,7 +77,7 @@ public class Player implements Serializable {
         this.id = id;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
