@@ -11,242 +11,307 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".45"
-            android:background="@color/backColor">
+            android:layout_weight="0.8"
+            android:background="@color/back"
+            android:backgroundTint="@color/back"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="229dp"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:text="Log Out"
-                    android:layout_width="wrap_content"
-                    android:layout_height="37dp"
-                    android:id="@+id/button6"
-                    android:backgroundTint="@color/backColor"
-                    android:textColor="@android:color/white"
-                    android:onClick="logOut"/>
-
-                <TextView
-                    android:text="215 ppg"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/ppg"
-                    android:layout_weight=".5"
-                    android:textSize="36sp"
-                    android:gravity="center"
-                    android:textColor="@android:color/white"
-                    tools:textStyle="bold"
-                    android:paddingRight="30dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
+            <Button
+                android:id="@+id/button6"
                 android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="2dp"
+                android:alpha="1"
+                android:backgroundTint="@color/backColor"
+                android:onClick="logOut"
+                android:text="Shop"
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/ppg"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.09"
-                android:weightSum="1">
-
-                <Button
-                    android:text="Optimize"
-                    android:layout_width="match_parent"
-                    android:backgroundTint="@color/backColor"
-                    android:id="@+id/optimize"
-                    android:layout_weight="0.58"
-                    android:onClick="optimize"
-                    android:textColor="@android:color/background_light"
-                    android:layout_height="40dp" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="33dp"
-                    android:layout_weight="0.58"></LinearLayout>
-
-                <TextView
-                    android:text="Darko Novakovic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/username"
-                    android:gravity="bottom|right"
-                    android:textColor="@android:color/white"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="4dp" />
-
-                <TextView
-                    android:text="dnovakovic21@yahoo.com"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/email"
-                    android:textColor="@android:color/white"
-                    android:gravity="bottom|right"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="10dp" />
-            </LinearLayout>
+                android:layout_weight=".5"
+                android:text="$50,000"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="36sp"
+                tools:textStyle="bold" />
 
         </LinearLayout>
 
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".3"
-            android:scrollbarAlwaysDrawVerticalTrack="false"
-            android:background="@color/colorPrimary">
-
-            <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button18"
-                android:layout_weight="1" />
-
-            <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button17"
-                android:layout_weight="1" />
-
-            <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button16"
-                android:layout_weight="1" />
-
-            <ScrollView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+            android:layout_marginTop="1sp"
+            android:layout_weight=".2"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:scrollbarAlwaysDrawVerticalTrack="false">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight=".1"
-                    android:background="@color/backColor">
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/back"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/stock_name0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25"
+                            android:gravity="bottom|left"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text='DON "THE BITCH" MITCHELL'
+                            android:textColor="@android:color/background_light" />
+
+                        <TextView
+                            android:id="@+id/stock_shares0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25"
+                            android:gravity="left"
+                            android:paddingBottom="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:text="100 SHARES"
+                            android:textColor="@android:color/darker_gray" />
+                    </LinearLayout>
 
                     <TextView
-                        android:text="Remaining Salary: 50,000"
+                        android:id="@+id/stock_price0"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/salary"
-                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
                         android:gravity="center"
-                        android:textColor="@android:color/background_light"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="5dp" />
+                        android:paddingBottom="25dp"
+                        android:paddingTop="25dp"
+                        android:text="$112.7"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:id="@+id/stock_percent0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:paddingBottom="25dp"
+                        android:paddingTop="25dp"
+                        android:text="-32.8%"
+                        android:textColor="@android:color/holo_red_dark" />
+
                 </LinearLayout>
 
-                <Button
-                    android:text="Quarterback"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".1"
-                    android:backgroundTint="#FFFFFF"
-                    android:id="@+id/qb"
-                    android:onClick="qb"
-                    android:textSize="9sp" />
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/back"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:text="Running back"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".1"
-                    android:backgroundTint="#FFFFFF"
-                    android:onClick="rb0"
-                    android:id="@+id/rb0"
-                    android:textSize="9sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical">
 
-                <Button
-                    android:text="Running Back"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".1"
-                    android:backgroundTint="#FFFFFF"
-                    android:onClick="rb1"
-                    android:id="@+id/rb1"
-                    android:textSize="9sp" />
+                        <TextView
+                            android:id="@+id/stock_name1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25"
+                            android:gravity="bottom|left"
+                            android:paddingBottom="0dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text='DON "THE BITCH" MITCHELL'
+                            android:textColor="@android:color/background_light" />
 
-                <Button
-                    android:text="Wide Receiver"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".1"
-                    android:backgroundTint="#FFFFFF"
-                    android:id="@+id/wr0"
-                    android:onClick="wr0"
-                    android:textSize="9sp" />
+                        <TextView
+                            android:id="@+id/stock_shares1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25"
+                            android:gravity="left"
+                            android:paddingBottom="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:text="100 SHARES"
+                            android:textColor="@android:color/darker_gray" />
+                    </LinearLayout>
 
-                <Button
-                    android:text="Wide Receiver"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".1"
-                    android:backgroundTint="#FFFFFF"
-                    android:id="@+id/wr1"
-                    android:onClick="wr1"
-                    android:textSize="9sp" />
+                    <TextView
+                        android:id="@+id/stock_price1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:paddingBottom="25dp"
+                        android:paddingTop="25dp"
+                        android:text="$112.7"
+                        android:textColor="@android:color/background_light" />
 
-                <Button
-                    android:text="Wide Receiver"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".1"
-                    android:backgroundTint="#FFFFFF"
-                    android:id="@+id/wr2"
-                    android:onClick="wr2"
-                    android:textSize="9sp" />
+                    <TextView
+                        android:id="@+id/stock_percent1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:paddingBottom="25dp"
+                        android:paddingTop="25dp"
+                        android:text="-32.8%"
+                        android:textColor="@android:color/holo_red_dark" />
 
-                <Button
-                    android:text="Tight End"
-                    android:layout_width="match_parent"
-                    android:layout_weight=".1"
-                    android:backgroundTint="#FFFFFF"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/te"
-                    android:onClick="te"
-                    android:textSize="9sp" />
+                </LinearLayout>
 
-                <Button
-                    android:text="Flex"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_weight=".1"
-                    android:backgroundTint="#FFFFFF"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/flex"
-                    android:onClick="flex"
-                    android:textSize="9sp" />
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/back"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:text="Defense/Special Teams"
-                    android:layout_width="match_parent"
-                    android:layout_weight=".1"
-                    android:backgroundTint="#FFFFFF"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/defense"
-                    android:onClick="defense"
-                    android:textSize="9sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical">
 
-                <Button
-                    android:text="Enter Lineup"
+                        <TextView
+                            android:id="@+id/stock_name2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25"
+                            android:gravity="bottom|left"
+                            android:paddingBottom="0dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text='DON "THE BITCH" MITCHELL'
+                            android:textColor="@android:color/background_light" />
+
+                        <TextView
+                            android:id="@+id/stock_shares2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25"
+                            android:gravity="left"
+                            android:paddingBottom="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:text="100 SHARES"
+                            android:textColor="@android:color/darker_gray" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/stock_price2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:paddingBottom="25dp"
+                        android:paddingTop="25dp"
+                        android:text="$112.7"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:id="@+id/stock_percent2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:paddingBottom="25dp"
+                        android:paddingTop="25dp"
+                        android:text="-32.8%"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_weight=".05"
-                    android:backgroundTint="#66ff33"
-                    android:onClick="submit"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/submitLineup" />
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/back"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/stock_name3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25"
+                            android:gravity="bottom|left"
+                            android:paddingBottom="0dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text='DON "THE BITCH" MITCHELL'
+                            android:textColor="@android:color/background_light" />
+
+                        <TextView
+                            android:id="@+id/stock_shares3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25"
+                            android:gravity="left"
+                            android:paddingBottom="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:text="100 SHARES"
+                            android:textColor="@android:color/darker_gray" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/stock_price3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:paddingBottom="25dp"
+                        android:paddingTop="25dp"
+                        android:text="$112.7"
+                        android:textColor="@android:color/background_light" />
+
+                    <TextView
+                        android:id="@+id/stock_percent3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:paddingBottom="25dp"
+                        android:paddingTop="25dp"
+                        android:text="-32.8%"
+                        android:textColor="@android:color/holo_red_dark" />
+
+                </LinearLayout>
+
+
             </LinearLayout>
-            </ScrollView>
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

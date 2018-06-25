@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import fantasy.nfl.tool.myapplication.API.API_PlayingToday;
+import fantasy.nfl.tool.myapplication.API.API_Players;
 import fantasy.nfl.tool.myapplication.Models.Player;
 import fantasy.nfl.tool.myapplication.R;
 import fantasy.nfl.tool.myapplication.Tools.TokenSaver;
@@ -34,61 +34,39 @@ public class Players extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.players);
 
-        API_PlayingToday asyncTask1 = new API_PlayingToday();
-        List todayPlayers = new ArrayList<>();
-        Intent myIntent = getIntent(); // gets the previously created intent
-        int position = myIntent.getIntExtra("Position", 0);
+        API_Players apiGetPlayers = new API_Players();
+        List players = new ArrayList<>();
+
+        //Gets the previously created intent and its extras
+        Intent myIntent = getIntent();
         activityIdentity = myIntent.getIntExtra("ActivityIdentity", 0);
-        TextView playersPosition  = (TextView) findViewById(R.id.textView2);
 
-        switch (position) {
-            case (0): {
-                playersPosition.setText("Quarterbacks");
-                break;
-            }
-            case (1): {
-                playersPosition.setText("Running Backs");
-                break;
-            }
-            case (2): {
-                playersPosition.setText("Wide Recievers");
-                break;
-            }
-            case (3): {
-                playersPosition.setText("Tight Ends");
-                break;
-            }
-            case (4): {
-                playersPosition.setText("Defense");
-                break;
-            }
-            case (5): {
-                playersPosition.setText("Flex");
-                break;
-            }
-        }
-
+        //Execute an async task, apiGetPlayers, from class API_Players and save them in the List players
         try {
-            todayPlayers = asyncTask1.execute(position, TokenSaver.getToken(getApplicationContext())).get();
+            players = apiGetPlayers.execute(TokenSaver.getToken(getApplicationContext())).get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
 
+        //Create linearlayouts and then call functions fillLayout and fillppg in order to fill in the layouts
         LinearLayout rootView = (LinearLayout) findViewById(R.id.AdvancedCatalogContainer);
-        LinearLayout ppg = (LinearLayout) findViewById(R.id.ppg);
-        fillLayout(rootView, todayPlayers);
-        fillppg(ppg, todayPlayers);
+        fillLayout(rootView, players);
+
+        //FUTURE USE: Add percentage increase for stock holder
+//        LinearLayout ppg = (LinearLayout) findViewById(R.id.ppg);
+//        fillppg(ppg, players);
     }
 
-    //Creates the square buttons for each Players playing today so that the user would be taken to the Playerstats activity.
+    //Takes in a layout and list and fills in the layout with the listed items while also formatting the layout's aesthetically
     public void fillLayout(LinearLayout root, final List<Player> Players) {
         for (int i = 0; i < Players.size(); i++) {
             Button myButton = new Button(this);
             LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-            int price = (int) Players.get(i).getPrice();
             DecimalFormat formatter = new DecimalFormat("#,###");
+            int price = (int) Players.get(i).getPrice();
+
             if(i == 0 || Players.get(i - 1).getName().indexOf(Players.get(i).getName()) < 0){
                 myButton.setText(Players.get(i).getName() + "\n" + formatter.format(price));
             }

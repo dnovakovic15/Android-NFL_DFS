@@ -24,7 +24,7 @@ import fantasy.nfl.tool.myapplication.Models.Player;
 import fantasy.nfl.tool.myapplication.Tools.PriceComparator;
 
 
-public class API_PlayingToday extends AsyncTask<Object, Object, List<String>> {
+public class API_Players extends AsyncTask<Object, Object, List<String>> {
 
     private List finalPlayers = new ArrayList();
 
